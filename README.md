@@ -2,11 +2,11 @@
 
 This repository includes the scripts to generate panel a, b and d from Figure 5 in Duran et al (2021). 
 
-* Panel a: [script](https://github.com/msfuentealba/duran2021/blob/main/scripts/panel_a.R) [raw plot data](https://github.com/msfuentealba/duran2021/blob/main/output/raw_panel_a.csv)
+* Panel a: [script](https://github.com/msfuentealba/duran2021/blob/main/scripts/panel_a.R) [rawdata](https://github.com/msfuentealba/duran2021/blob/main/output/raw_panel_a.csv)
 
-* Panel b: [script](https://github.com/msfuentealba/duran2021/blob/main/scripts/panel_b.R) [raw plot data](https://github.com/msfuentealba/duran2021/blob/main/output/raw_panel_b.csv)
+* Panel b: [script](https://github.com/msfuentealba/duran2021/blob/main/scripts/panel_b.R) [rawdata](https://github.com/msfuentealba/duran2021/blob/main/output/raw_panel_b.csv)
 
-* Panel d: [script](https://github.com/msfuentealba/duran2021/blob/main/scripts/panel_d.R) [raw plot data](https://github.com/msfuentealba/duran2021/blob/main/output/raw_panel_d.csv)
+* Panel d: [script](https://github.com/msfuentealba/duran2021/blob/main/scripts/panel_d.R) [rawdata](https://github.com/msfuentealba/duran2021/blob/main/output/raw_panel_d.csv)
 
 * Differential abundance analysis: [data](https://github.com/msfuentealba/duran2021/blob/main/raw_data/linear_model_results.tsv)
 
