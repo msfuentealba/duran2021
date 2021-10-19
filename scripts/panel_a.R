@@ -3,9 +3,6 @@ library(RColorBrewer)
 library(circlize)
 library(ComplexHeatmap)
 
-#data <- read_rds("./output/linear_model.rds") %>% unnest(c("results"))
-#write_tsv(data, file = "./raw_data/linear_model_results.tsv")
-
 data <- read_tsv("./raw_data/linear_model_results.tsv")
 xbp_wt <- data %>% filter(control=="wt"&mutant=="xbp") %>% group_by(symbol) %>% summarise(score = mean(score))
 xbp_wt$group <- "xbp_wt"
@@ -36,3 +33,5 @@ Heatmap(as.matrix(mat),
         heatmap_legend_param = list(direction = "vertical", title = "Significance\nscore", title_position = "topcenter"),
         col = col_fun)
 dev.off()
+
+write.csv(mat, file = "./output/raw_panel_a.csv", row.names = TRUE)
