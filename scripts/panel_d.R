@@ -50,3 +50,7 @@ Heatmap(r,
         column_names_rot = 45,
         border = TRUE)
 dev.off()
+
+write.csv(r, file = "./output/raw_panel_d.csv", row.names = TRUE)
+
+
