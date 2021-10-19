@@ -49,6 +49,11 @@ fad_wt_dn <- g_fad_wt$Description[g_fad_wt$NES<0&g_fad_wt$p.adjust<0.05]
 fx_fad_up <- g_fx_fad$Description[g_fx_fad$NES>0&g_fx_fad$p.adjust<0.05]
 fx_fad_dn <- g_fx_fad$Description[g_fx_fad$NES<0&g_fx_fad$p.adjust<0.05]
 
+write.csv(rbind(tibble(control = "wt", mutant = "fad", direction = "up", `go term` = fad_wt_up),
+      tibble(control = "wt", mutant = "fad", direction = "down", `go term` = fad_wt_dn),
+      tibble(control = "fad", mutant = "fad/xbp1", direction = "up", `go term` = fx_fad_up),
+      tibble(control = "fad", mutant = "fad/xbp1", direction = "down", `go term` = fx_fad_dn)), file = "./output/raw_panel_b.csv", row.names = FALSE)
+
 testGeneOverlap(newGeneOverlap(fad_wt_up,fx_fad_dn,genome.size = length(unique(c(g_fad_wt$Description,g_fx_fad$Description)))))
 testGeneOverlap(newGeneOverlap(fad_wt_dn,fx_fad_up,genome.size = length(unique(c(g_fad_wt$Description,g_fx_fad$Description)))))
 
